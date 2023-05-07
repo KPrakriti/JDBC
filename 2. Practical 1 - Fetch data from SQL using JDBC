@@ -1,0 +1,35 @@
+import java.sql.*;
+
+/* 1. import java.sql
+ * 2. Load and Register Driver --> com.mysql.jdbc.Driver
+ * 3. Create a connection
+ * 4. Create a statement
+ * 5. Execute the query
+ * 6. Process the result
+ * 7. Close
+ * */
+public class Demo {
+
+	public static void main(String[] args) throws Exception
+	{
+		
+		String url = "jdbc:mysql://localhost:3306/abc";
+		String uname = "root";
+		String pass = "supermommy";
+		String query = "select * from studentdetails;";
+		
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection con = DriverManager.getConnection(url,uname,pass);
+		Statement st = con.createStatement();
+		ResultSet rs = st.executeQuery(query);
+		
+		String userData;
+		while(rs.next())
+		{
+			userData = rs.getInt(1) + " : " + rs.getString(2);
+			System.out.println(userData);
+		}
+		st.close();
+		con.close();
+	}
+}
