@@ -1,0 +1,40 @@
+JDBC stands for Java Database Connectivity. Connecting Java application with Data base is JDBC.
+
+To connect Java application with Database - there are 7 steps
+Import the package
+Load and register the driver
+Establish the connection
+Create the statement
+Execute the query
+Process result
+Close
+
+Driver for mysql is com.mysql.jdbc.driver
+To register a Driver-> class.forName(com.mysql.jdbc.Driver)
+
+Writing the above 7 steps in Code
+
+Import java.sql.*;
+P S V M (){
+Class.forName(“com.mysql.jdbc.Driver”);
+
+Connection con = DriverManager.getConnection(“ URL ”, “ UserName “, “ Password ” );
+Statement st = con.CreateStatement();
+ResultSet rs = st.executeQuery(“Select * from table”);
+
+rs.next();
+rs.getInt(1) + “ “ + rs.getString(2);
+
+st.Clsoe();
+Con.Close();
+}
+
+DDL - Data Definition Language - Creating structure of a table falls into DDL
+DML - Data manipulation Language - Data Manipulation such as Insert, Update
+DQL - Data Query Language - used for fetching data from the database. For DQL we use execute query.
+
+
+If you are using Eclipse 
+then you’ll have to register the jdbc connector in your java project. For this right click on your project -> build path - > configure build path
+
+
