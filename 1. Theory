@@ -1,5 +1,8 @@
 JDBC stands for Java Database Connectivity. Connecting Java application with Data base is JDBC.
 
+JDBC is an API (Application Programming Interface) that helps a programmer to write a Java program to connect to a database,
+retrieve the data from the database, and perform various operations on the data in a Java program.
+
 To connect Java application with Database - there are 7 steps
 Import the package
 Load and register the driver
