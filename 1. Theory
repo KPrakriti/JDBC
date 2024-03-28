@@ -40,4 +40,6 @@ DQL - Data Query Language - used for fetching data from the database. For DQL we
 If you are using Eclipse 
 then you’ll have to register the jdbc connector in your java project. For this right click on your project -> build path - > configure build path
 
+This is a change to test git status command.
+
 
